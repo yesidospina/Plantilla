@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="Presentation.Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title><%: Page.Title %></title>
+    <!-- 
+        <asp:PlaceHolder ID="PlaceHolder1" runat="server">     
+          <%: Scripts.Render("~/bundles/modernizr") %>
+        </asp:PlaceHolder> 
+        
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link type="text/css" href="Styles/jquery-ui.css" rel="Stylesheet" />
+        <meta name="viewport" content="width=device-width" />
+        <webopt:BundleReference ID="BundleReference1" runat="server" Path="~/Content/css" /> 
+    -->  
+    <link rel="stylesheet" href="Content/SiteLogin.css" type="text/css" />
+    
+    
+    <%--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />--%>
+    
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <img id="Img1" runat="server" src="~/Images/agrosan.jpg" alt="Agrosan S.A." class="logo" />
+                    <!-- <img runat="server" src="~/Images/logoInfoanalisis.png" alt="Agrosan S.A." class="logo2" /> -->
+                </p>
+            </div>
+            <div class="float-left logoLogin">
+                <p class="site-title">
+                    <img id="Img2" runat="server" src="~/Images/logoLogin.png" alt="Agrosan S.A." width="750"/>
+                    <!-- <img runat="server" src="~/Images/logoInfoanalisis.png" alt="Agrosan S.A." class="logo2" /> -->
+                </p>
+            </div>
+        </div>
+    </header>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; <%: DateTime.Now.Year %> - Agrosan S.A.</p>
+            </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
